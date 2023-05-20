@@ -2,11 +2,11 @@
 
   <section class="layout-row align-items-center justify-content-between">
     <label>Celsius: </label>
-    <input type="number" class="large" data-test-id="celsius-input" [(ngModel)]="celsius" onchange="updateCelsius($event)"/>
+    <input type="number" class="large" data-test-id="celsius-input" [(ngModel)]="celsius" (change)="updateCelsius($event)"/>
   </section>
 
   <section class="layout-row align-items-center justify-content-between">
       <label>Fahrenheit: </label>
-      <input type="number" class="large" data-test-id="fahrenheit-input" [(ngModel)]="fahrenheit" onchange="updateFahrenheit($event)"/>
+      <input type="number" class="large" data-test-id="fahrenheit-input" [(ngModel)]="fahrenheit" (change)="updateFahrenheit($event)"/>
   </section>
 </div>

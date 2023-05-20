@@ -15,14 +15,15 @@ export class TemperatureConverter implements OnInit {
     // F = C*9/5 + 32
   }
 
-  updateCelsius(value: number) {
-    this.celsius = value;
-    this.fahrenheit = value *9/5 + 32;
+  updateCelsius(value) {
+    console.log(value.target.value)
+    this.celsius = value.target.value;
+    this.fahrenheit = this.celsius *9/5 + 32;
   }
 
-  updateFahrenheit(value: number) {
-    this.fahrenheit = value;
-    this.celsius = (value - 32) * 5/9;
+  updateFahrenheit(value) {
+    this.fahrenheit = value.target.value;
+    this.celsius = (this.fahrenheit - 32) * 5/9;
   }
 
 }
