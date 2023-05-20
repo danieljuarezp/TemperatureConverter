@@ -18,12 +18,12 @@ export class TemperatureConverter implements OnInit {
   updateCelsius(value) {
     console.log(value.target.value)
     this.celsius = value.target.value;
-    this.fahrenheit = this.celsius *9/5 + 32;
+    this.fahrenheit = (this.celsius *9/5 + 32).toFixed(1);
   }
 
   updateFahrenheit(value) {
     this.fahrenheit = value.target.value;
-    this.celsius = (this.fahrenheit - 32) * 5/9;
+    this.celsius = ((this.fahrenheit - 32) * 5/9).toFixed(1);
   }
 
 }
